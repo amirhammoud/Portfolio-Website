@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #161616;
+}
+
+/* Navbar Section */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    background: #161616;
+    font-family: 'Montserrat', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    animation: drop-in 1.25s linear;
+}
+
+.navbar-logo {
+    font-weight: 400;
+    background: #ed213a;
+    background: -webkit-linear-gradient(to right, #ed213a, #93291e);
+    background: linear-gradient(to right, #ed213a, #93291e);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 20px;
+    width: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 825px;
+    margin-right: 8%;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-items {
+    position: relative;
+}
+
+.navbar-links a {
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ed213a;
+    background: -webkit-linear-gradient(to right, #ed213a, #93291e);
+    background: linear-gradient(to right, #ed213a, #93291e);
+    height: 32px;
+    width: 84px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+    opacity: 80%;
+    transition: all 0.3s ease;
+}
+
+
+.navbar-items a:hover {
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.navbar-items a:before {
+    content: '';
+    display: block; 
+    height: 3px;
+    width: 100%;
+    background: #ed213a;
+    bottom: -8px;
+    width: 0%;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.navbar-items a:hover:before {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar-button:hover {
+    opacity: 80%;
+    transition: all 0.3s ease;
+}
+
+@keyframes drop-in {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-30px);
+    }
+    100% { 
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+/* End Navbar Section */
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    background: linear-gradient(to right, #161616, #000000);
+    height: 100vh;
+}
+
+.hero-container {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-heading {
+    color: white;
+    font-size: 120px;
+    animation: fade-in 5.5s ease;
+}
+
+.hero-heading span {
+    background: #ed213a;
+    background: -webkit-linear-gradient(to right, #ed213a, #93291e);
+    background: linear-gradient(to right, #ed213a, #93291e);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    animation: fade-in 6s ease;
+}
+
+.hero-description {
+    margin-top: 3rem;
+    font-size: 60px;
+    background: #ed213a;
+    width: 100%;
+    animation: fade-in 10.5s ease;
+}
+
+.main-button {
+    margin-top: 3rem;
+    color: white;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    background: #ed213a;
+    background: -webkit-linear-gradient(to right, #ed213a, #93291e);
+    background: linear-gradient(to right, #ed213a, #93291e);
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    animation: fade-in-button 7.5s ease;
+    transition: all 0.3s ease;
+}
+
+.main-button:hover {
+    opacity: 80%;
+    transition: all 0.3s ease;
+}
+
+@keyframes fade-in {
+    0%, 25% { 
+        opacity: 0; 
+    }
+
+    100% { 
+        opacity: 1; 
+    }
+}
+
+@keyframes fade-in-button {
+    0%, 55% { 
+        opacity: 0; 
+    }
+
+    100% { 
+        opacity: 1; 
+        transition: all 0.3s ease;
+    }
+}
+/* End Hero Section */
+
+/* About Section */
+.about {
+    background: black;
+    height: 100vh;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1300px;
+    z-index: 1;
+}
+
+.photo {
+    width: 100%;
+}
+
+.about-content {
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 50px;
+}
+
+.about-container h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about-container h2 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.about-content p {
+    line-height: 25px;
+}
+
+
+/* End About Section */
+
+/* Skills Section */
+.skills {
+    background: black;
+    background: linear-gradient(to right, #161616, #000000);
+    height: 100vh;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.skills-heading {
+    padding-top: 50px;
+
+}
+
+.skillcard-container {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    height: 75%;
+    max-width: 1300px;
+    z-index: 1;
+}
+
+.skillcard {
+    margin-right: 15px;
+    border:#ed213a;
+    border-style: double;
+    border-radius: 50px;
+}
+
+.skillcard img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.skillcard p {
+    margin-bottom: 20px;
+}
+
+.skillcard:hover {
+    animation: card-drop 0.75s ease;
+}
+
+@keyframes card-drop {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+/* End Skills Section */
+
+
